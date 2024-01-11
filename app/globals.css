@@ -1,0 +1,58 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@font-face {
+  font-family: Krona One;
+  /* font-size: large; */
+  src: url(./font/KronaOne-Regular.ttf);
+}
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));
+}
+
+.font-Krona-One {
+  font-family: 'Krona One';
+}
+
+.notification-info:before {
+  content: none !important;
+}
+
+.notification:before {
+  display: none !important;
+}
+
+.notification {
+  padding: 15px !important;
+}
+
+.notification-info {
+  background-color: #992fb4 !important;
+}
+
+.notification-container {
+  top: 100% !important;
+  transform: translateY(-60%);
+  left: 0 !important;
+}
